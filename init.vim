@@ -12,6 +12,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Coc extensions
+let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets']
+
 " Vim plug
 " Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
 
