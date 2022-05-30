@@ -19,6 +19,9 @@ set splitbelow
 " Coc extensions
 let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets']
 
+" Vim airline
+let g:airline_powerline_fonts = 1
+
 " Vim plug
 " Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
 
@@ -27,6 +30,8 @@ call plug#begin()
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
