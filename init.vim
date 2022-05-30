@@ -12,6 +12,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Set default windows split behaviour
+set splitright
+set splitbelow
+
 " Coc extensions
 let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets']
 
@@ -53,6 +57,10 @@ EOF
 " Key mappings
 
 let mapleader=","
+
+" Edit the vim configuration file, reload vimrc
+nnoremap <F1> :vsp $MYVIMRC<CR>
+nnoremap <F2> :so $MYVIMRC<CR>
 
 " List buffers
 noremap <C-l> <Esc>:ls<Enter>
