@@ -53,6 +53,9 @@ require'nvim-tree'.setup {
     mappings = {
       list = list
     }
+  },
+  renderer = {
+    highlight_opened_files = "icon"
   }
 }
 
