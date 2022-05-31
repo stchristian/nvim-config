@@ -6,6 +6,10 @@ filetype indent on
 " Always show a tab
 set showtabline=2
 
+" Only one status line
+
+set laststatus=3
+
 " Tab settings
 set tabstop=2
 set shiftwidth=2
