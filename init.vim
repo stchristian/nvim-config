@@ -3,8 +3,17 @@ colorscheme codedark
 set number
 filetype indent on
 
+" Set file search path to include current dir and subfolders
+set path=.,,,$PWD/**
+set wildignorecase
+set wildignore=**/node_modules/*,**/.git/*
+
 " Always show a tab
 set showtabline=2
+
+" Only one status line
+
+set laststatus=3
 
 " Tab settings
 set tabstop=2
@@ -28,6 +37,7 @@ let g:airline_powerline_fonts = 1
 call plug#begin()
 
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -54,8 +64,14 @@ require'nvim-tree'.setup {
       list = list
     }
   },
+  live_filter = {
+    always_show_folders = false
+  },
   renderer = {
     highlight_opened_files = "icon"
+  },
+  git = {
+    ignore = false
   }
 }
 
@@ -71,11 +87,11 @@ let mapleader=","
 nnoremap <C-p> "+p<CR>
 
 " Edit the vim configuration file, reload vimrc
-nnoremap <F1> :vsp $MYVIMRC<CR>
-nnoremap <F2> :so $MYVIMRC<CR>
+nnoremap <silent> <F1> :vsp $MYVIMRC<CR>
+nnoremap <silent> <F2> :so $MYVIMRC<CR>
 
 " List buffers
-noremap <C-l> <Esc>:ls<Enter>
+noremap <silent> <C-l> <Esc>:ls<Enter>
 
 " Move current line
 nnoremap - :move .+1<CR>==
@@ -86,13 +102,13 @@ nnoremap <C-J> <C-]>
 
 " Remap some navigation keys because Mac's dead keys suck
 noremap § ^
-noremap ' g_
+" noremap ' g_
 noremap 1 $
 
 " Nvimtree
 
-nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <silent> <C-n> :NvimTreeToggle<CR>
+nnoremap <silent> <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 " More available functions:
 " NvimTreeOpen
