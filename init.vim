@@ -67,6 +67,9 @@ EOF
 
 let mapleader=","
 
+" Paste 
+nnoremap <C-p> "+p<CR>
+
 " Edit the vim configuration file, reload vimrc
 nnoremap <F1> :vsp $MYVIMRC<CR>
 nnoremap <F2> :so $MYVIMRC<CR>
