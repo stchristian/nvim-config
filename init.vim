@@ -12,7 +12,6 @@ set wildignore=**/node_modules/*,**/.git/*
 set showtabline=2
 
 " Only one status line
-
 set laststatus=3
 
 " Tab settings
@@ -26,26 +25,32 @@ set splitright
 set splitbelow
 
 " Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc-prettier']
+
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Vim airline
 let g:airline_powerline_fonts = 1
+" Configure tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Vim plug
 " Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
 
 call plug#begin()
 
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'kyazdani42/nvim-web-devicons'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder
+Plug 'junegunn/fzf.vim'
+Plug 'kyazdani42/nvim-tree.lua' " File tree plugin
+Plug 'kyazdani42/nvim-web-devicons' " File icons next to files in file tree
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive' " Better git support also airline requires this to display git info in status line
+Plug 'vim-airline/vim-airline' " Status line plugin
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
-
 
 " Nvim tree uses lua so it can be set up in a lua script
 
@@ -65,13 +70,16 @@ require'nvim-tree'.setup {
     }
   },
   live_filter = {
-    always_show_folders = false
+    always_show_folders = false -- To apply filters to folders
   },
   renderer = {
-    highlight_opened_files = "icon"
+    highlight_opened_files = "all"
   },
   git = {
-    ignore = false
+    ignore = false -- Don't hide the files that are in .gitignore
+  },
+  update_focused_file = {
+    enable = true
   }
 }
 
@@ -88,10 +96,23 @@ nnoremap <C-p> "+p<CR>
 
 " Edit the vim configuration file, reload vimrc
 nnoremap <silent> <F1> :vsp $MYVIMRC<CR>
-nnoremap <silent> <F2> :so $MYVIMRC<CR>
+nnoremap <F2> :so $MYVIMRC<CR>
 
-" List buffers
-noremap <silent> <C-l> <Esc>:ls<Enter>
+" Shortcuts for buffer manipulation
+nnoremap <Leader>l :ls<CR>
+nnoremap <space><tab> :bn<CR>
+nnoremap <s-space><tab> :bp<CR>
+nnoremap <Leader>g :e#<CR>
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
 
 " Move current line
 nnoremap - :move .+1<CR>==
