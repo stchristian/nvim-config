@@ -29,7 +29,12 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc
 
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
-source ./init/airline.vim
+
+function SourceLocal(filename)
+  exec 'source ' . stdpath('config') . '/init/' . a:filename 
+endfunction
+
+call SourceLocal("airline.vim")
 
 " Vim plug
 " Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
@@ -48,6 +53,6 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-source ./init/nvim-tree.lua
-source ./init/mappings.vim
-source ./init/coc-nvim.vim
+call SourceLocal("nvim-tree.lua")
+call SourceLocal("mappings.vim")
+call SourceLocal("coc-nvim.vim")
