@@ -11,8 +11,8 @@ nnoremap <F2> :so $MYVIMRC<CR>
 
 " Shortcuts for buffer manipulation
 nnoremap <Leader>l :ls<CR>
-nnoremap <space><tab> :bn<CR>
-nnoremap <s-space><tab> :bp<CR>
+nnoremap <tab> :bn<CR>
+nnoremap <space><tab> :bp<CR>
 nnoremap <Leader>g :e#<CR>
 nnoremap <Leader>1 :1b<CR>
 nnoremap <Leader>2 :2b<CR>
