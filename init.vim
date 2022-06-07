@@ -29,7 +29,7 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc
 
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
-
+" Function to source init files from the init directory
 function SourceLocal(filename)
   exec 'source ' . stdpath('config') . '/init/' . a:filename 
 endfunction
@@ -41,6 +41,7 @@ call SourceLocal("airline.vim")
 
 call plug#begin()
 
+Plug 'vim-scripts/ScrollColors' " Preview color schemes using the :SCROLLS command 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 Plug 'kyazdani42/nvim-tree.lua' " File tree plugin

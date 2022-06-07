@@ -1,4 +1,4 @@
 {
   "snippets.ultisnips.enable": false,
-    "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"],
-  }
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"]
+}

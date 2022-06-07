@@ -3,7 +3,10 @@
 let mapleader=","
 
 " Paste 
-nnoremap <C-p> "+p<CR>
+nnoremap <C-p> "+p
+
+" Open fzf
+nnoremap <leader> :Files<CR>
 
 " Edit the vim configuration file, reload vimrc
 nnoremap <silent> <F1> :vsp $MYVIMRC<CR>
@@ -11,19 +14,18 @@ nnoremap <F2> :so $MYVIMRC<CR>
 
 " Shortcuts for buffer manipulation
 nnoremap <Leader>l :ls<CR>
-nnoremap <tab> :bn<CR>
-nnoremap <space><tab> :bp<CR>
-nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
+nmap <tab> <Plug>AirlineSelectNextTab
+nmap <S-tab> <Plug>AirlineSelectPrevTab
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>0 <Plug>AirlineSelectTab0
 
 " Move current line
 nnoremap - :move .+1<CR>==
