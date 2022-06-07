@@ -9,6 +9,9 @@ nnoremap <C-p> "+p<CR>
 nnoremap <silent> <F1> :vsp $MYVIMRC<CR>
 nnoremap <F2> :so $MYVIMRC<CR>
 
+" Fzf file finder
+nmap <leader>p <CMD>Files<CR>
+
 " Shortcuts for buffer manipulation
 nnoremap <Leader>l :ls<CR>
 nnoremap <tab> :bn<CR>

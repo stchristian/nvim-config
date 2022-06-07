@@ -25,7 +25,7 @@ set splitright
 set splitbelow
 
 " Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc-prettier']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc-prettier', 'coc-eslint']
 
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
