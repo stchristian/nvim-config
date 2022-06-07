@@ -25,10 +25,9 @@ set splitright
 set splitbelow
 
 " Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc-prettier', 'coc-eslint']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc-eslint']
 
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
+let g:prettier#exec_cmd_async = 1 " Run prettier async
 " Function to source init files from the init directory
 function SourceLocal(filename)
   exec 'source ' . stdpath('config') . '/init/' . a:filename 
@@ -41,6 +40,8 @@ call SourceLocal("airline.vim")
 
 call plug#begin()
 
+" Vim prettier integration by the Prettier team
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'vim-scripts/ScrollColors' " Preview color schemes using the :SCROLLS command 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder
 Plug 'junegunn/fzf.vim'

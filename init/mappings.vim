@@ -5,15 +5,17 @@ let mapleader=","
 " Paste 
 nnoremap <C-p> "+p
 
-" Open fzf
-nnoremap <leader> :Files<CR>
-
 " Edit the vim configuration file, reload vimrc
 nnoremap <silent> <F1> :vsp $MYVIMRC<CR>
 nnoremap <F2> :so $MYVIMRC<CR>
 
 " Fzf file finder
 nmap <leader>p <CMD>Files<CR>
+
+" Quit shortcut for tabs, windows, buffers
+nmap <C-q>t <CMD>tabclose<CR> 
+nmap <C-q>w <CMD>quit<CR> 
+nmap <C-q>b <CMD>bdelete<CR> 
 
 " Shortcuts for buffer manipulation
 nnoremap <Leader>l :ls<CR>
