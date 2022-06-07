@@ -13,6 +13,7 @@ nnoremap <F2> :so $MYVIMRC<CR>
 nmap <leader>p <CMD>Files<CR>
 
 " Quit shortcut for tabs, windows, buffers
+nmap <C-q>a <CMD>qa<CR>
 nmap <C-q>t <CMD>tabclose<CR> 
 nmap <C-q>w <CMD>quit<CR> 
 nmap <C-q>b <CMD>bdelete<CR> 
