@@ -51,6 +51,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive' " Better git support also airline requires this to display git info in status line
 Plug 'vim-airline/vim-airline' " Status line plugin
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mlaursen/vim-react-snippets'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -58,3 +59,4 @@ call plug#end()
 call SourceLocal("nvim-tree.lua")
 call SourceLocal("mappings.vim")
 call SourceLocal("coc-nvim.vim")
+

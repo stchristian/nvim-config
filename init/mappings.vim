@@ -10,13 +10,15 @@ nnoremap <silent> <F1> :vsp $MYVIMRC<CR>
 nnoremap <F2> :so $MYVIMRC<CR>
 
 " Fzf file finder
-nmap <leader>p <CMD>Files<CR>
+nmap <leader>p <CMD>Files!<CR>
 
 " Quit shortcut for tabs, windows, buffers
 nmap <C-q>a <CMD>qa<CR>
 nmap <C-q>t <CMD>tabclose<CR> 
 nmap <C-q>w <CMD>quit<CR> 
-nmap <C-q>b <CMD>bdelete<CR> 
+nmap <C-q>b <CMD>bdelete<CR>
+" Force quit
+nmap <C-q>fa <CMD>qa!<CR>
 
 " Shortcuts for buffer manipulation
 nnoremap <Leader>l :ls<CR>
