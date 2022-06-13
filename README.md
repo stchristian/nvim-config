@@ -6,6 +6,7 @@ Prerequisites:
 - Node
 - yarn package manager (vim-prettier).
 - python3 and pynvim (for ultisnips)
+- [fd][https://github.com/sharkdp/fd] required by FZF to list files
 
 ## Other plugings
 
