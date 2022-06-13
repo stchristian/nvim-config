@@ -12,7 +12,7 @@ nnoremap <F2> :so $MYVIMRC<CR>
 " Fzf file finder
 " fd is required to list files for fzf
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, {'source': 'fd -E node_modules'}, <bang>0)
+      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'source': 'fd -E node_modules'}), <bang>0)
 nmap <space>f <CMD>Files<CR>
 
 " Quit shortcut for tabs, windows, buffers
