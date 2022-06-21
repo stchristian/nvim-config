@@ -1,6 +1,6 @@
 syntax on
 colorscheme codedark
-set number
+set relativenumber
 filetype indent on
 
 " Set file search path to include current dir and subfolders
@@ -59,4 +59,4 @@ call plug#end()
 call SourceLocal("nvim-tree.lua")
 call SourceLocal("mappings.vim")
 call SourceLocal("coc-nvim.vim")
-
+call SourceLocal("fzf.vim")
