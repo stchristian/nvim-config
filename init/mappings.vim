@@ -36,6 +36,9 @@ nmap <leader>0 <Plug>AirlineSelectTab0
 nnoremap - :move .+1<CR>==
 nnoremap _ :move .-2<CR>==
 
+" Substitute all occurences of the word under the cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+
 " Needed to navigate in help files
 nnoremap <C-J> <C-]>
 

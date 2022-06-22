@@ -1,7 +1,6 @@
 " Vim airline configuration
 
 let g:airline_powerline_fonts = 1
-let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr'])
 " Enable airline's tabline
 let g:airline#extensions#tabline#show_buffers = 0 " Tabs will appear for each loaded buffer
 let g:airline#extensions#tabline#enabled = 1

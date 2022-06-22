@@ -56,6 +56,7 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr'])
 call SourceLocal("nvim-tree.lua")
 call SourceLocal("mappings.vim")
 call SourceLocal("coc-nvim.vim")
