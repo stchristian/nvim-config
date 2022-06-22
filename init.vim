@@ -1,5 +1,4 @@
 syntax on
-colorscheme codedark
 set relativenumber
 filetype indent on
 
@@ -53,10 +52,16 @@ Plug 'vim-airline/vim-airline' " Status line plugin
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'ryanoasis/vim-devicons'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'morhetz/gruvbox' 
 
 call plug#end()
 
+" Settings that depend on the plugins
 let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr'])
+colorscheme gruvbox
+
 call SourceLocal("nvim-tree.lua")
 call SourceLocal("mappings.vim")
 call SourceLocal("coc-nvim.vim")
