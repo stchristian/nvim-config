@@ -19,8 +19,8 @@ nmap <C-q>fa <CMD>qa!<CR>
 
 " Shortcuts for buffer manipulation
 nnoremap <Leader>l :ls<CR>
-nmap <tab> <Plug>AirlineSelectNextTab
-nmap <S-tab> <Plug>AirlineSelectPrevTab
+nmap <leader><tab> <Plug>AirlineSelectNextTab
+nmap <leader><S-tab> <Plug>AirlineSelectPrevTab
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
